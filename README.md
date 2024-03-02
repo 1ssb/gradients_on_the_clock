@@ -1,4 +1,4 @@
-# Gradients_on_the_Clock
+# ANU Techlauncher project: Gradients on the Clock
 
 
 ## Phase 1: Ground preparation --> Design the prototype
