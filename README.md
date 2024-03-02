@@ -2,7 +2,12 @@
 
 
 ## Phase 0: Design the prototype
-### Design a 3D structure which can harbour the microcontroller, display, input-output lines, FPGA board and then print/make it.
+
+### Setup computation: Setup the microcontroller and FPGA setup with your PC and try to perform a gradient descent computation. Develop and find the most efficient software and hardware pipeline (Checkpoint) which supports automatic differentiation.
+
+### Design a basic Gradient Box: Design a 3D structure which can harbour the microcontroller, display, input-output lines, FPGA board and then print/make it. Inventory to be decided upon. What is the challenge? It must be very power efficient. Very.
+
+### Perform a initial capcity study: Matrix Multiplication, Inversion and setting up the AutoDiff pipeline in C program over 4 target functions: Rasterin. Rosenbrock. Spherical. 
 
 ## Phase 1: Feasibility Study and Initial Prototype
 
