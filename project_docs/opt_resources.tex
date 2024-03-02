@@ -1,0 +1,213 @@
+\documentclass{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\title{List of Target Optimization Problems}
+\author{$\mathfrak{R}_{\Omega}$}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Optimization Problems}
+
+Optimization problems are critical in numerous scientific and engineering applications. The following is a list of well-known optimization problems, spanning various characteristics including convexity, dimensionality, and smoothness. These problems serve as benchmarks for assessing the performance of optimization algorithms.
+
+\subsection{Convex Problems}
+
+Convex problems are characterized by a global minimum that optimization algorithms can efficiently find.
+
+\begin{enumerate}
+    \item \textbf{Linear Function} (Convex, Smooth, Low-Dimensional) \\
+    Represents the simplest form of convex optimization problems.
+    \[ f(\mathbf{x}) = \mathbf{c}^T \mathbf{x} \]
+    where $\mathbf{c}$ is a constant vector.
+
+    \item \textbf{Quadratic Function} (Convex, Smooth, Low-Dimensional) \\
+    A fundamental convex function with a unique global minimum.
+    \[ f(\mathbf{x}) = \mathbf{x}^T A \mathbf{x} + \mathbf{b}^T \mathbf{x} + c \]
+    where $A$ is a positive definite matrix, $\mathbf{b}$ is a vector, and $c$ is a scalar.
+
+    \item \textbf{L1 Regularization Problem} (Convex, Non-Smooth, Low-Dimensional) \\
+    Encourages sparsity in the solution, commonly used in compressed sensing and machine learning.
+    \[ f(\mathbf{x}) = \|A\mathbf{x} - \mathbf{b}\|_2^2 + \lambda \|\mathbf{x}\|_1 \]
+    where $\lambda$ is the regularization parameter.
+\end{enumerate}
+
+\subsection{Non-Convex Problems}
+
+Non-convex problems present additional challenges due to the presence of multiple local minima.
+
+\begin{enumerate}
+    \item \textbf{Rosenbrock Function} (Non-Convex, Smooth, Low-Dimensional) \\
+    Known for its narrow, curved valley, making it difficult for algorithms to converge to the global minimum.
+    \[ f(\mathbf{x}) = \sum_{i=1}^{n-1} [100(x_{i+1} - x_i^2)^2 + (1 - x_i)^2] \]
+
+    \item \textbf{Rastrigin Function} (Non-Convex, Smooth, High-Dimensional) \\
+    Characterized by a highly oscillatory landscape with many local minima.
+    \[ f(\mathbf{x}) = An + \sum_{i=1}^{n} [x_i^2 - A \cos(2\pi x_i)] \]
+    where $A = 10$.
+
+    \item \textbf{Ackley Function} (Non-Convex, Smooth, High-Dimensional) \\
+    Features a nearly flat outer region and a steep drop to the global minimum.
+    \[ f(\mathbf{x}) = -20 \exp\left(-0.2 \sqrt{\frac{1}{n} \sum_{i=1}^{n} x_i^2}\right) - \exp\left(\frac{1}{n} \sum_{i=1}^{n} \cos(2\pi x_i)\right) + 20 + e \]
+
+    \item \textbf{Lévy Function N.13} (Non-Convex, Smooth, High-Dimensional) \\
+    Exhibits a complex landscape with multiple local minima, making global optimization challenging.
+    \[ f(\mathbf{x}) = \sin^2(3\pi x_1) + \sum_{i=1}^{n-1} (x_i - 1)^2 [1 + \sin^2(3\pi x_{i+1})] + (x_n - 1)^2 [1 + \sin^2(2\pi x_n)] \]
+\end{enumerate}
+
+\subsection{Non-Smooth Problems}
+
+Non-smooth problems lack a derivative at some points in their domain, presenting unique challenges for gradient-based optimization methods.
+
+\begin{enumerate}
+    \item \textbf{Absolute Value Function} (Convex, Non-Smooth, Low-Dimensional) \\
+    A basic example of a non-smooth convex optimization problem.
+    \[ f(\mathbf{x}) = \|\mathbf{x}\|_1 \]
+
+    \item \textbf{Max Function} (Non-Convex, Non-Smooth, Low-Dimensional) \\
+    Represents non-smooth, non-convex optimization challenges.
+    \[ f(\mathbf{x}) = \max(x_1, x_2, \ldots, x_n) \]
+\end{enumerate}
+
+\subsection{High-Dimensional Problems}
+
+High-dimensional problems are particularly challenging due to the curse of dimensionality.
+
+\begin{enumerate}
+    \item \textbf{Sparse Reconstruction} (Convex, Non-Smooth, High-Dimensional) \\
+    A problem relevant in compressed sensing, promoting sparsity in high-dimensional space.
+    \[ f(\mathbf{x}) = \frac{1}{2} \|A\mathbf{x} - \mathbf{b}\|^2_2 + \lambda \|\mathbf{x}\|_1 \]
+    where $\lambda$ is the regularization parameter.
+\end{enumerate}
+
+\section{Recommended Reading for Beginning Optimization Students}
+
+The following books are highly recommended for students beginning their journey in optimization. They cover a broad range of topics from introductory concepts to advanced techniques.
+
+\begin{enumerate}
+
+    \item \textit{Convex Optimization} by Stephen Boyd and Lieven Vandenberghe. Focuses on the fundamentals of convex optimization, providing a solid foundation for understanding and solving convex optimization problems.
+    
+    \item \textit{Numerical Optimization} by Jorge Nocedal and Stephen J. Wright. Provides a comprehensive overview of numerical techniques for optimization, suitable for advanced undergraduates or graduate students.
+    
+    \item \textit{Optimization by Vector Space Methods} by David G. Luenberger. Explores optimization methods from a vector space perspective, ideal for students with a strong interest in linear algebra and its applications to optimization.
+
+    \item \textit{Practical Mathematical Optimization: Basic Optimization Theory and Gradient-Based Algorithms} by Jan A Snyman \& Daniel N Wilke, Springer Optimization and Its Applications, 2018. Basic optimization principles are presented with emphasis on gradient-based numerical optimization strategies and algorithms for solving both smooth and noisy discontinuous optimization problems. A special Python module is electronically available (via springerlink) that makes the new algorithms featured in the text easily accessible and directly applicable.
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+\begin{thebibliography}{9}
+
+\bibitem{rosenbrock}
+H.H. Rosenbrock, ``An automatic method for finding the greatest or least value of a function,'' \emph{The Computer Journal}, vol. 3, no. 3, pp. 175–184, 1960.
+
+\bibitem{rastrigin}
+L.A. Rastrigin, ``Systems of extremal control,'' \emph{Mir}, Moscow, 1974.
+
+\bibitem{ackley}
+D.H. Ackley, ``A connectionist machine for genetic hillclimbing,'' \emph{Kluwer Academic Publishers}, 1987.
+
+\bibitem{levy}
+M. D. Schmidt and H. Lipson, ``Distilling Free-Form Natural Laws from Experimental Data,'' \emph{Science}, vol. 324, no. 5923, pp. 81–85, 2009.
+
+\bibitem{levy}
+M. D. Schmidt and H. Lipson, ``Distilling Free-Form Natural Laws from Experimental Data,'' \emph{Science}, vol. 324, no. 5923, pp. 81–85, 2009.
+
+\end{thebibliography}
+
+\end{document}
+
+
+\documentclass{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{hyperref}
+
+\title{List of Target Optimization Problems and Reading List for Beginners}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Optimization Problems}
+
+Optimization problems are crucial in various scientific and engineering domains. This section lists well-known optimization problems, illustrating different challenges, including convexity, smoothness, and dimensionality.
+
+\subsection{Convex Problems}
+Convex problems have a global minimum that can be efficiently located by optimization algorithms.
+
+\begin{enumerate}
+    \item \textbf{Linear Function} (Convex, Smooth, Low-Dimensional):
+    \[ f(\mathbf{x}) = \mathbf{c}^T \mathbf{x} \]
+
+    \item \textbf{Quadratic Function} (Convex, Smooth, Low-Dimensional):
+    \[ f(\mathbf{x}) = \mathbf{x}^T A \mathbf{x} + \mathbf{b}^T \mathbf{x} + c \]
+
+    \item \textbf{L1 Regularization Problem} (Convex, Non-Smooth, Low-Dimensional):
+    \[ f(\mathbf{x}) = \|A\mathbf{x} - \mathbf{b}\|_2^2 + \lambda \|\mathbf{x}\|_1 \]
+\end{enumerate}
+
+\subsection{Non-Convex Problems}
+Non-convex problems may contain multiple local minima, making them more challenging.
+
+\begin{enumerate}
+    \item \textbf{Rosenbrock Function} (Non-Convex, Smooth, Low-Dimensional):
+    \[ f(\mathbf{x}) = \sum_{i=1}^{n-1} [100(x_{i+1} - x_i^2)^2 + (1 - x_i)^2] \]
+
+    \item \textbf{Rastrigin Function} (Non-Convex, Smooth, High-Dimensional):
+    \[ f(\mathbf{x}) = An + \sum_{i=1}^{n} [x_i^2 - A \cos(2\pi x_i)] \]
+
+    \item \textbf{Ackley Function} (Non-Convex, Smooth, High-Dimensional):
+    \[ f(\mathbf{x}) = -20 \exp\left(-0.2 \sqrt{\frac{1}{n} \sum_{i=1}^{n} x_i^2}\right) - \exp\left(\frac{1}{n} \sum_{i=1}^{n} \cos(2\pi x_i)\right) + 20 + e \]
+\end{enumerate}
+
+\subsection{Non-Smooth Problems}
+Non-smooth problems lack a derivative at some points, introducing unique optimization challenges.
+
+\begin{enumerate}
+    \item \textbf{Absolute Value Function} (Convex, Non-Smooth, Low-Dimensional):
+    \[ f(\mathbf{x}) = \|\mathbf{x}\|_1 \]
+
+    \item \textbf{Max Function} (Non-Convex, Non-Smooth, Low-Dimensional):
+    \[ f(\mathbf{x}) = \max(x_1, x_2, \ldots, x_n) \]
+\end{enumerate}
+
+\section{Recommended Reading for Beginning Optimization Students}
+
+The following books are highly recommended for students beginning their journey in optimization. They cover a broad range of topics from introductory concepts to advanced techniques.
+
+\begin{enumerate}
+    \item \textit{Introduction to Operations Research} by Frederick S. Hillier and Gerald J. Lieberman. A comprehensive introduction to the field of operations research and optimization techniques.
+    
+    \item \textit{Convex Optimization} by Stephen Boyd and Lieven Vandenberghe. Focuses on the fundamentals of convex optimization, providing a solid foundation for understanding and solving convex optimization problems.
+    
+    \item \textit{Nonlinear Programming: Theory and Algorithms} by Mokhtar S. Bazaraa, Hanif D. Sherali, and C. M. Shetty. Offers an in-depth look at nonlinear programming, covering both theoretical aspects and algorithmic solutions.
+    
+    \item \textit{Numerical Optimization} by Jorge Nocedal and Stephen J. Wright. Provides a comprehensive overview of numerical techniques for optimization, suitable for advanced undergraduates or graduate students.
+    
+    \item \textit{Optimization by Vector Space Methods} by David G. Luenberger. Explores optimization methods from a vector space perspective, ideal for students with a strong interest in linear algebra and its applications to optimization.
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+\begin{thebibliography}{9}
+
+\bibitem{rosenbrock}
+H.H. Rosenbrock, ``An automatic method for finding the greatest or least value of a function,'' \emph{The Computer Journal}, vol. 3, no. 3, pp. 175–184, 1960.
+
+\bibitem{rastrigin}
+L.A. Rastrigin, ``Systems of extremal control,'' \emph{Mir}, Moscow, 1974.
+
+\bibitem{ackley}
+D.H. Ackley, ``A connectionist machine for genetic hillclimbing,'' \emph{Kluwer Academic Publishers}, 1987.
+
+\bibitem{levy}
+M. D. Schmidt and H. Lipson, ``Distilling Free-Form Natural Laws from Experimental Data,'' \emph{Science}, vol. 324, no. 5923, pp. 81–85, 2009.
+
+\end{thebibliography}
+
+\end{document}
+
