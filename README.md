@@ -4,7 +4,7 @@
 ## Phase 0: Design the prototype
 ### Design a 3D structure which can harbour the microcontroller, display, input-output lines, FPGA board and then print/make it.
 
-# Phase 1: Feasibility Study and Initial Prototype
+## Phase 1: Feasibility Study and Initial Prototype
 
 #### Conceptualization: Start with a detailed feasibility study to explore the practical benefits and challenges of performing gradient computations from CUDA cores to specialized hardware like FPGAs in terms of power efficiency and computation speed.
 
