@@ -1,6 +1,6 @@
 # ANU Techlauncher project: Gradients on the Clock
 
-# Phase 1: Ground Preparation --> Design the Prototype
+# Phase 1: Ground Preparation & Prototype Design
 
 ## Setup Initial Computation
 
