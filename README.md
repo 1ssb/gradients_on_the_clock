@@ -1,7 +1,7 @@
 # Gradients_on_the_Clock
 
 
-## Phase 0: Fround preparation --> Design the prototype
+## Phase 0: Ground preparation --> Design the prototype
 
 ### Setup computation: Setup the microcontroller and FPGA setup with your PC and try to perform a gradient descent computation. Develop and find the most efficient software and hardware pipeline (Checkpoint) which supports automatic differentiation.
 
