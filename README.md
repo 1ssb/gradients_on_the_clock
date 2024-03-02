@@ -9,8 +9,6 @@
 
 ### Perform a initial capcity study: Matrix Multiplication, Inversion and setting up the AutoDiff pipeline in C program over target optimization functions.
 
-#####################################################################################################################################################################################
-
 ## Scientific Goals of this Project:
 
 ### Precision/Accuracy: Determine the numerical precision needed for your computations. This affects the FPGA design, especially the choice between fixed-point and floating-point arithmetic.
