@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradients on the Clock</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        :root {
+            --main-bg-color: #f0f0f0;
+            --text-color: #333;
+            --link-color: #6a5acd;
+            --link-hover-color: #483d8b;
+            --header-footer-bg-color: #ffffff;
+            --footer-text-color: #ffffff;
+            --dark-bg-color: #333;
+            --dark-text-color: #ddd;
+            --dark-link-color: #add8e6;
+            --dark-link-hover-color: #87ceeb;
+            --dark-header-footer-bg-color: #444;
+            --dark-heading-color: #ffd700;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--main-bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header, section, footer {
+            background: var(--header-footer-bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header h1, section h2, section h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+            color: var(--link-color);
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--link-hover-color);
+            text-decoration: underline;
+        }
+
+        .dark-mode {
+            background-color: var(--dark-bg-color);
+            color: var(--dark-text-color);
+        }
+
+        .dark-mode a {
+            color: var(--dark-link-color);
+        }
+
+        .dark-mode a:hover {
+            color: var(--dark-link-hover-color);
+        }
+
+        .dark-mode header, .dark-mode section, .dark-mode footer {
+            background: var(--dark-header-footer-bg-color);
+        }
+
+        .dark-mode header h1, .dark-mode section h2, .dark-mode section h3 {
+            color: var(--dark-heading-color);
+        }
+
+        .toggle-theme {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .toggle-theme i {
+            color: var(--text-color);
+            background: var(--header-footer-bg-color);
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode .toggle-theme i {
+            color: var(--footer-text-color);
+            background: var(--dark-header-footer-bg-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-theme">
+        <i id="toggleIcon" class="fas fa-moon" title="Toggle Light/Dark Theme"></i>
+    </div>
+    <div class="container">
+        <section>
+            <header>
+                <h1>Gradients on the Clock</h1>
+                <p>Welcome!</p>
+                <p>This is a pioneering venture at the intersection of microprocessors, optimization, and deep learning. This project aims to enhance the capabilities of automatic differentiation engines critical to deep learning on microprocessors. Our theme centers around Robotic Learning, where we aspire to create robots that can learn and adapt on the go.</p>
+                
+                <p>Unlike traditional project structures, this initiative follows an inverted format where the team drives decisions and sets targets, fostering a collaborative and dynamic research environment.</p>
+
+                <p>Whether you're interested in robotics, AI, hardware design, or software development, this project offers a unique opportunity to contribute to groundbreaking research and development. This project is designed for a 7-member undergraduate team.</p>
+            </header>
+        </section>
+        <section>
+            <h2>About the Project: Phase Zero</h2>
+            <p>
+                "Gradients on the Clock" embarks on the essential groundwork and prototype development phase, aimed at creating a cutting-edge computational framework. This project uniquely integrates microcontrollers, Field-Programmable Gate Arrays (FPGAs), and personal computers to facilitate core operations in gradient descent, crucial for the process of automatic differentiation. This system is designed to bridge the gap between theoretical AI concepts and practical hardware applications, providing an educational foundation in the integral aspects of hardware and software integration.
+            </p>
+            <h3>Project Goals</h3>
+            <ul>
+                <li><strong>System Architecture Design:</strong> The project begins with the meticulous selection and integration of high-performance microcontrollers and FPGA boards. This stage covers extensive educational content on <a href="https://www.arduino.cc/">microcontroller programming</a> and <a href="https://www.xilinx.com/products/design-tools/vivado.html">FPGA customization</a>. The integration also includes setting up robust communication protocols between these components and PCs to ensure seamless data flow and processing capabilities.</li>
+                <li><strong>Advanced Gradient Computation Techniques:</strong> We are setting up to implement and refine optimization algorithms that operate under strict computational and memory constraints. This exploration includes the creation of optimized interfaces with both local and cloud storage solutions, prominently featuring platforms such as <a href="https://cloud.google.com/">Google Cloud</a> and <a href="https://aws.amazon.com/">AWS</a>. The aim is to facilitate scalable and efficient cloud computation models that integrate smoothly with our hardware setup.</li>
+                <li><strong>Algorithm Benchmarking and Optimization:</strong> Detailed testing of gradient descent and automatic differentiation operations is conducted to enhance their performance and reliability. This phase involves the use of sophisticated analytical tools like <a href="https://www.tensorflow.org/">TensorFlow</a> and <a href="https://pytorch.org/">PyTorch</a>, enabling us to measure and optimize the algorithms' functionality across different hardware setups.</li>
+                <li><strong>Academic Integration and Global Collaboration:</strong> This project is not only about technical development but also about creating a global collaborative environment. We continually engage with current research, and maintain an interactive, up-to-date project website to document and share our findings. This helps participants develop their skills in digital communication and web development, using comprehensive resources like <a href="https://scholar.google.com/">Google Scholar</a> for literature reviews and <a href="https://developer.mozilla.org/en-US/docs/Web/Guide">MDN Web Docs</a> for technical guidance.</li>
+            </ul>
+            <h3>Learning Outcomes</h3>
+            <p>Participants will gain a multi-dimensional educational experience, achieving the following enhanced learning outcomes:</p>
+            <ul>
+                <li>Develop deep technical skills in programming microcontrollers and FPGAs, crucial for creating embedded systems that integrate AI capabilities.</li>
+                <li>Design and implement energy-efficient hardware setups with a focus on scalability and long-term operation.</li>
+                <li>Master the art of performance analysis and algorithm optimization across various hardware platforms, ensuring optimal efficiency and effectiveness.</li>
+                <li>Advance their research and technical writing skills through regular updates and contributions to the project's digital platforms.</li>
+                <li>Learn to configure and utilize major machine learning libraries, adapting them to run efficiently on microcontroller and FPGA based environments.</li>
+                <li>Engage with a global community of researchers and developers through collaborative projects and forums, enhancing professional networking and knowledge exchange.</li>
+            </ul>
+
+            <h3>Motivating References</h3>
+            <ul>
+                <li>Baydin et al., <em>Automatic Differentiation in Machine Learning: A Survey</em>. <a href="https://doi.org/10.48550/arXiv.1502.05767">https://doi.org/10.48550/arXiv.1502.05767</a></li>
+                <li>Piercy and Steur in the European Journal of Operations Research, <em>Reducing wall-clock time for the computation of all efficient extreme points in multiple objective linear programming</em>.</li>
+                <li>Metz et al., <em>Learned optimizers that outperform on wall-clock and validation loss</em>, ICLR 2019.</li>
+                <li>Goodfellow, Bengio, and Courville, <em>Deep Learning</em>, MIT Press, widely regarded as a seminal text in deep learning covering a range of topics including neural networks and hardware optimizations. <a href="http://www.deeplearningbook.org/">http://www.deeplearningbook.org/</a></li>
+                <li>Shewchuk, <em>An Introduction to the Conjugate Gradient Method Without the Agonizing Pain</em>, a fundamental read on optimization techniques applicable to hardware-accelerated systems. <a href="https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf">https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Project Opportunities</h2>
+            <p>Join an ambitious, student-led Open Source Project at the forefront of AI and hardware interaction. This is a unique opportunity to publish novel insights and contribute to transformative open-source AI research. By participating, you'll gain hands-on experience in hardware engineering, deep learning applications, robotics, and the mathematics of optimization. You'll enhance your technical skills and collaborate on a public platform that bridges the academic and industrial spheres.</p>
+            <h2>Participant Requirements</h2>
+            <p>We're seeking applicants with a robust foundation in university-level calculus and proficiency in Python. While prior knowledge of microprocessor programming and software development tools like Xilinx Vivado and Arduino is advantageous, it's not mandatory. Familiarity with web development (HTML, JavaScript, CSS) will also be helpful for contributing to our project documentation. Be prepared to acquire a diverse set of skills over the course of two semesters.</p>
+            <p><strong>Additional Requirements:</strong> Candidates must demonstrate strong analytical thinking and problem-solving skills. Experience with any machine learning frameworks like TensorFlow or PyTorch is highly desirable but not required. Commitment to collaborative development and an eagerness to learn new technologies are crucial. Applicants should also be ready to engage with both theoretical and practical aspects of the project, including participating in discussions, writing reports, and implementing prototypes.</p>
+
+            <h2>Join Us</h2>
+            <p>This project is open to ANU School of Computing students as part of the Techlauncher program. We're actively seeking motivated students to join the inaugural team. For more information, please contact <a href="mailto:Subhransu.Bhattacharjee@anu.edu.au">Subhransu.Bhattacharjee@anu.edu.au</a>.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Gradients on the Clock. Subhransu S. Bhattacharjee.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.toggle-theme').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            var icon = document.getElementById('toggleIcon');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
