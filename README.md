@@ -1,5 +1,5 @@
 # ANU Techlauncher Engineering Project: Gradients on the Clock
 
-# Phase 1: Ground Preparation & Prototype Design
+# Phase 0: Ground Preparation & Prototype Design
 
-Check the website out for more information.
+Check the website out for more information. Actively seeking students!
