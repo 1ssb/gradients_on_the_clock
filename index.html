@@ -7,160 +7,161 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<style>
-    :root {
-        --main-bg-color: #f0f0f0;
-        --text-color: #333;
-        --link-color: #6a5acd;
-        --link-hover-color: #483d8b;
-        --header-footer-bg-color: #ffffff;
-        --footer-text-color: #ffffff;
-        --dark-bg-color: #333;
-        --dark-text-color: #ddd;
-        --dark-link-color: #add8e6;
-        --dark-link-hover-color: #87ceeb;
-        --dark-header-footer-bg-color: #444;
-        --dark-heading-color: #ffd700;
-    }
+    <style>
+        :root {
+            --main-bg-color: #f0f0f0;
+            --text-color: #333;
+            --link-color: #6a5acd;
+            --link-hover-color: #483d8b;
+            --header-footer-bg-color: #ffffff;
+            --footer-text-color: #ffffff;
+            --dark-bg-color: #333;
+            --dark-text-color: #ddd;
+            --dark-link-color: #add8e6;
+            --dark-link-hover-color: #87ceeb;
+            --dark-header-footer-bg-color: #444;
+            --dark-heading-color: #ffd700;
+        }
 
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: var(--main-bg-color);
-        color: var(--text-color);
-        transition: background-color 0.3s, color 0.3s;
-    }
-
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    header, section {
-        background: var(--header-footer-bg-color);
-        padding: 20px;
-        border-radius: 8px;
-        transition: background-color 0.3s, color 0.3s;
-    }
-
-    header h1, section h2, section h3 {
-        margin: 0 0 10px 0;
-        font-size: 1.5em;
-        color: var(--link-color);
-    }
-
-    a {
-        color: var(--link-color);
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: var(--link-hover-color);
-        text-decoration: underline;
-    }
-
-    .dark-mode {
-        background-color: var(--dark-bg-color);
-        color: var(--dark-text-color);
-    }
-
-    .dark-mode a {
-        color: var(--dark-link-color);
-    }
-
-    .dark-mode a:hover {
-        color: var(--dark-link-hover-color);
-    }
-
-    .dark-mode header, .dark-mode section {
-        background: var(--dark-header-footer-bg-color);
-    }
-
-    .dark-mode header h1, .dark-mode section h2, .dark-mode section h3 {
-        color: var(--dark-heading-color);
-    }
-
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .toggle-theme {
-        cursor: pointer;
-    }
-
-    .toggle-theme i {
-        color: var(--text-color);
-        background: var(--header-footer-bg-color);
-        padding: 10px;
-        border-radius: 50%;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        transition: background-color 0.3s, color 0.3s;
-    }
-
-    .dark-mode .toggle-theme i {
-        color: var(--footer-text-color);
-        background: var(--dark-header-footer-bg-color);
-    }
-
-    footer {
-        text-align: center;
-        margin-top: 20px;
-        background: var(--header-footer-bg-color);
-        padding: 20px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .dark-mode footer {
-        background: var(--dark-header-footer-bg-color);
-    }
-
-    @media (max-width: 768px) {
         body {
-            padding: 10px;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--main-bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
 
         header, section {
-            padding: 10px;
+            background: var(--header-footer-bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s;
+            box-sizing: border-box;
         }
 
         header h1, section h2, section h3 {
-            font-size: 1.2em;
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+            color: var(--link-color);
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var (--link-hover-color);
+            text-decoration: underline;
+        }
+
+        .dark-mode {
+            background-color: var(--dark-bg-color);
+            color: var(--dark-text-color);
+        }
+
+        .dark-mode a {
+            color: var(--dark-link-color);
+        }
+
+        .dark-mode a:hover {
+            color: var(--dark-link-hover-color);
+        }
+
+        .dark-mode header, .dark-mode section {
+            background: var(--dark-header-footer-bg-color);
+        }
+
+        .dark-mode header h1, .dark-mode section h2, .dark-mode section h3 {
+            color: var(--dark-heading-color);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .toggle-theme {
+            cursor: pointer;
         }
 
         .toggle-theme i {
-            padding: 8px;
+            color: var(--text-color);
+            background: var(--header-footer-bg-color);
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode .toggle-theme i {
+            color: var(--footer-text-color);
+            background: var(--dark-header-footer-bg-color);
         }
 
         footer {
-            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+            background: var(--header-footer-bg-color);
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
-    }
-</style>
 
+        .dark-mode footer {
+            background: var(--dark-header-footer-bg-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header, section {
+                padding: 10px;
+            }
+
+            header h1, section h2, section h3 {
+                font-size: 1.2em;
+            }
+
+            .toggle-theme i {
+                padding: 8px;
+            }
+
+            footer {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <section>
-        <header>
-            <div class="header-content">
-                <h1>Gradients on the Clock</h1>
-                <div class="toggle-theme">
-                    <i id="toggleIcon" class="fas fa-moon" title="Toggle Light/Dark Theme"></i>
+            <header>
+                <div class="header-content">
+                    <h1>Gradients on the Clock</h1>
+                    <div class="toggle-theme">
+                        <i id="toggleIcon" class="fas fa-moon" title="Toggle Light/Dark Theme"></i>
+                    </div>
                 </div>
-            </div>
-            <p>Welcome!</p>
-            <p>This is a pioneering venture at the intersection of microprocessors, optimization, and deep learning. This project aims to enhance the capabilities of automatic differentiation engines critical to deep learning on microprocessors. Our theme centers around Robotic Learning, where we aspire to create robots that can learn and adapt on the go.</p>
-            <p>Unlike traditional project structures, this initiative follows an inverted format where the team drives decisions and sets targets, fostering a collaborative and dynamic research environment.</p>
-            <p>Whether you're interested in robotics, AI, hardware design, or software development, this project offers a unique opportunity to contribute to groundbreaking research and development. This project is designed for a 7-member undergraduate team.</p>
-        </header>
+                <p>Welcome!</p>
+                <p>This is a pioneering venture at the intersection of microprocessors, optimization, and deep learning. This project aims to enhance the capabilities of automatic differentiation engines critical to deep learning on microprocessors. Our theme centers around Robotic Learning, where we aspire to create robots that can learn and adapt on the go.</p>
+                <p>Unlike traditional project structures, this initiative follows an inverted format where the team drives decisions and sets targets, fostering a collaborative and dynamic research environment.</p>
+                <p>Whether you're interested in robotics, AI, hardware design, or software development, this project offers a unique opportunity to contribute to groundbreaking research and development. This project is designed for a 7-member undergraduate team.</p>
+            </header>
         </section>
         <section>
             <h3>Motivation</h3>
@@ -221,7 +222,7 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Gradients on the Clock. Visit our site at <a href="https://1ssb.github.io">Subhransu S. Bhattacharjee</a></p>
+        <p>&copy; 2024 Gradients on the Clock. <a href="https://1ssb.github.io">Subhransu S. Bhattacharjee</a></p>
     </footer>
 
     <script>
