@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 5px;
+            font-family: 'Lato', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            overflow-x: hidden;
+        }
         body {
             font-family: 'Lato', sans-serif;
             margin: 0;
@@ -20,14 +28,18 @@
         .header {
             display: flex;
             justify-content: space-between;
+            flex-direction: row;
             align-items: center;
             padding: 20px;
             background-color: #f8f9fa;
+            overflow-y: auto;
+
         }
         .header .title {
             font-size: 24px;
             font-weight: bold;
             text-align: center;
+            overflow-y: auto;
         }
         .buttons {
             display: flex;
@@ -52,17 +64,17 @@
             text-align: left;
             max-width: 100%;
         }
-    .card {
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        width: 100%;
-        margin-bottom: 20px;
-        flex-shrink: 0; /* Prevent shrinking */
-    }
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+            flex-shrink: 0; /* Prevent shrinking */
+        }
         .card h2, .card h3 {
-            color: deepPink;
+            color: blue;
         }
         .bio-text {
             text-align: justify;
@@ -185,11 +197,11 @@
             </ul>
             <h3>Motivating References</h3>
             <ul>
-                <li>Baydin et al., <em>Automatic Differentiation in Machine Learning: A Survey</em>. <a href="https://doi.org/10.48550/arXiv.1502.05767">https://doi.org/10.48550/arXiv.1502.05767</a></li>
+                <li>Baydin et al., <em>Automatic Differentiation in Machine Learning: A Survey</em>. <a href="https://doi.org/10.48550/arXiv.1502.05767">(arXiv)</a></li>
                 <li>Piercy and Steur in the European Journal of Operations Research, <em>Reducing wall-clock time for the computation of all efficient extreme points in multiple objective linear programming</em>.</li>
                 <li>Metz et al., <em>Learned optimizers that outperform on wall-clock and validation loss</em>, ICLR 2019.</li>
-                <li>Goodfellow, Bengio, and Courville, <em>Deep Learning</em>, MIT Press, widely regarded as a seminal text in deep learning covering a range of topics including neural networks and hardware optimizations. <a href="http://www.deeplearningbook.org/">http://www.deeplearningbook.org/</a></li>
-                <li>Shewchuk, <em>An Introduction to the Conjugate Gradient Method Without the Agonizing Pain</em>, a fundamental read on optimization techniques applicable to hardware-accelerated systems. <a href="https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf">https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf</a></li>
+                <li>Goodfellow, Bengio, and Courville, <em>Deep Learning</em>, MIT Press, widely regarded as a seminal text in deep learning covering a range of topics including neural networks and hardware optimizations. <a href="http://www.deeplearningbook.org/">Book</a></li>
+                <li>Shewchuk, <em>An Introduction to the Conjugate Gradient Method Without the Agonizing Pain</em>, a fundamental read on optimization techniques applicable to hardware-accelerated systems. <a href="https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf">(Paper)</a></li>
             </ul>
 
             <p><strong>In case I have overwhelmed you with details, relax, this project will be performed in phases dependending on the feasibility and teams' expertise.</strong></p>
