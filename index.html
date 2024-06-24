@@ -8,148 +8,173 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        html {
-            height: 100%;
-            margin: 0;
-            padding: 5px;
-            font-family: 'Lato', sans-serif;
-            transition: background-color 0.3s, color 0.3s;
-            overflow-x: hidden;
-        }
-        body {
-            font-family: 'Lato', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row;
-            align-items: center;
-            padding: 20px;
-            background-color: #f8f9fa;
-            overflow-y: auto;
+   html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
 
-        }
-        .header .title {
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            overflow-y: auto;
-        }
-        .buttons {
-            display: flex;
-            gap: 10px;
-        }
-        .theme-toggle {
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        .theme-toggle i {
-            color: blue;
-        }
-        .container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 20px;
-            text-align: left;
-            max-width: 100%;
-        }
-        .card {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 100%;
-            margin-bottom: 20px;
-            flex-shrink: 0; /* Prevent shrinking */
-        }
-        .card h2, .card h3 {
-            color: blue;
-        }
-        .bio-text {
-            text-align: justify;
-        }
-        .bio-section {
-            margin-bottom: 20px;
-        }
-        .dark-mode .card {
-            background-color: #1c1c1c;
-            color: #e0e0e0;
-        }
-        .dark-mode .card h2, .dark-mode .card h3 {
-            color: yellow;
-        }
-        .dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        .dark-mode .header {
-            background-color: #1c1c1c;
-        }
-        .theme-toggle i {
-            color: black; /* Default color for light mode */
-        }
-        .dark-mode .theme-toggle i {
-            color: white; /* Color for dark mode */
-        }
-        a {
-            color: blue;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .dark-mode a {
-            color: lightblue;
-        }
-        .button1 {
-            display: inline-block;
-            padding: 10px 15px;
-            font-size: 16px;
-            color: #ffffff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            margin: 5px 0;
-        }
-        .button1:hover {
-            background-color: #0056b3;
-        }
-        @media (max-width: 768px) {
-            .header .title {
-                font-size: 18px;
-            }
-            .theme-toggle {
-                font-size: 20px;
-            }
-            .container {
-                padding: 10px;
-            }
-            .button1 {
-                font-size: 14px;
-            }
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f8f9fa;
-            font-size: 14px;
-            width: 100%;
-        }
-        .dark-mode footer {
-            background-color: #333 !important;
-        }
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+    align-items: center; /* Center aligns all flex children including header and footer */
+}
+
+.header {
+    width: 100%; /* Ensures header spans the full width */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.header .title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.theme-toggle i {
+    color: blue; /* Default color for light mode */
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures all cards are centered in the container */
+    justify-content: flex-start;
+    padding: 20px;
+    text-align: left;
+    width: 100%; /* Ensures container takes full width */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%; /* Width less than 100% to account for padding */
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.card h2, .card h3 {
+    color: blue;
+}
+
+.bio-text {
+    text-align: justify;
+}
+
+.bio-section {
+    margin-bottom: 20px;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .card {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+}
+
+.dark-mode .card h2, .dark-mode .card h3 {
+    color: yellow;
+}
+
+.dark-mode .header {
+    background-color: #1c1c1c;
+}
+
+.dark-mode .theme-toggle i {
+    color: white; /* Color for dark mode */
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.dark-mode a {
+    color: lightblue;
+}
+
+.button1 {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.button1:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .header .title {
+        font-size: 18px;
+    }
+    .theme-toggle {
+        font-size: 20px;
+    }
+    .container {
+        padding: 10px;
+    }
+    .card {
+        width: 100%; /* Makes card width 100% within the container */
+    }
+    .button1 {
+        font-size: 14px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    width: 100%;
+}
+
+.dark-mode footer {
+    background-color: #333 !important;
+}
+
     </style>
 </head>
 <body>
@@ -197,11 +222,11 @@
             </ul>
             <h3>Motivating References</h3>
             <ul>
-                <li>Baydin et al., <em>Automatic Differentiation in Machine Learning: A Survey</em>. <a href="https://doi.org/10.48550/arXiv.1502.05767">(arXiv)</a></li>
+                <li>Baydin et al., <em>Automatic Differentiation in Machine Learning: A Survey</em>. <a href="https://doi.org/10.48550/arXiv.1502.05767">https://doi.org/10.48550/arXiv.1502.05767</a></li>
                 <li>Piercy and Steur in the European Journal of Operations Research, <em>Reducing wall-clock time for the computation of all efficient extreme points in multiple objective linear programming</em>.</li>
                 <li>Metz et al., <em>Learned optimizers that outperform on wall-clock and validation loss</em>, ICLR 2019.</li>
-                <li>Goodfellow, Bengio, and Courville, <em>Deep Learning</em>, MIT Press, widely regarded as a seminal text in deep learning covering a range of topics including neural networks and hardware optimizations. <a href="http://www.deeplearningbook.org/">Book</a></li>
-                <li>Shewchuk, <em>An Introduction to the Conjugate Gradient Method Without the Agonizing Pain</em>, a fundamental read on optimization techniques applicable to hardware-accelerated systems. <a href="https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf">(Paper)</a></li>
+                <li>Goodfellow, Bengio, and Courville, <em>Deep Learning</em>, MIT Press, widely regarded as a seminal text in deep learning covering a range of topics including neural networks and hardware optimizations. <a href="http://www.deeplearningbook.org/">http://www.deeplearningbook.org/</a></li>
+                <li>Shewchuk, <em>An Introduction to the Conjugate Gradient Method Without the Agonizing Pain</em>, a fundamental read on optimization techniques applicable to hardware-accelerated systems. <a href="https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf">https://www.cs.cmu.edu/~quake-papers/painless-conjugate-gradient.pdf</a></li>
             </ul>
 
             <p><strong>In case I have overwhelmed you with details, relax, this project will be performed in phases dependending on the feasibility and teams' expertise.</strong></p>
