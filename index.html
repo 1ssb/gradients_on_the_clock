@@ -113,8 +113,29 @@
         }
 
         @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
+            body {
+                padding: 10px;
+            }
+
+            header, section, footer {
+                padding: 10px;
+            }
+
+            header h1, section h2, section h3 {
+                font-size: 1.2em;
+            }
+
+            .toggle-theme {
+                top: 10px;
+                right: 10px;
+            }
+
+            .toggle-theme i {
+                padding: 8px;
+            }
+
+            footer {
+                padding: 10px;
             }
         }
     </style>
@@ -150,7 +171,7 @@
                 By addressing these objectives, we aim to make significant contributions to the efficiency of deep learning models, ultimately benefiting the broader AI and robotics communities.
             </p>
         </section>
-            <section>
+        <section>
             <h2>About the Project</h2>
             <p>
                 "Gradients on the Clock" embarks on the essential groundwork and prototype development phase, aimed at creating a cutting-edge computational framework. This project uniquely integrates microcontrollers, Field-Programmable Gate Arrays (FPGAs), and personal computers to facilitate core operations in gradient descent, crucial for the process of automatic differentiation. This system is designed to bridge the gap between theoretical AI concepts and practical hardware applications, providing an educational foundation in the integral aspects of hardware and software integration.
@@ -194,7 +215,7 @@
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Gradients on the Clock. Subhransu S. Bhattacharjee.</p>
+        <p>&copy; 2024 Gradients on the Clock. <a href="https://1ssb.github.io">Subhransu S. Bhattacharjee</a>.</p>
     </footer>
 
     <script>
